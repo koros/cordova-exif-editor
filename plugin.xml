@@ -1,2 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
-<plugin id="cordova-plugin-exif-editor" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android"><name>ExifEditor</name><js-module name="ExifEditor" src="www/ExifEditor.js"><clobbers target="cordova.plugins.ExifEditor" /></js-module><platform name="android"><config-file parent="/*" target="res/xml/config.xml"><feature name="ExifEditor"><param name="android-package" value="cordova-plugin-exif-editor.ExifEditor" /></feature></config-file><config-file parent="/*" target="AndroidManifest.xml"></config-file><source-file src="src/android/ExifEditor.java" target-dir="src/cordova-plugin-exif-editor/ExifEditor" /></platform></plugin>
+<plugin id="cordova-plugin-exif-editor" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>ExifEditor</name>
+    <js-module name="ExifEditor" src="www/ExifEditor.js">
+        <clobbers target="cordova.plugins.ExifEditor" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="ExifEditor">
+                <param name="android-package" value="cordova.plugin.exif.editor" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml"></config-file>
+        <source-file src="src/android/ExifEditor.java" target-dir="src/cordova-plugin-exif-editor/ExifEditor" />
+    </platform>
+</plugin>

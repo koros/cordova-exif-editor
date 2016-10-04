@@ -1,0 +1,21 @@
+{
+  "name": "ExifEditor",
+  "version": "0.0.1",
+  "description": "A plugin for adding EXIF information to an image",
+  "cordova": {
+    "id": "cordova-plugin-exif-editor",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.mobileaccord.local:gkoros/exifeditor.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Koros",
+  "license": "ISC"
+}
