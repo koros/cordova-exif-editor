@@ -7,7 +7,7 @@
     <platform name="android">
         <config-file parent="/*" target="res/xml/config.xml">
             <feature name="ExifEditor">
-                <param name="android-package" value="cordova.plugin.exif.editor" />
+                <param name="android-package" value="cordova.plugin.exif.editor.ExifEditor" />
             </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml"></config-file>
