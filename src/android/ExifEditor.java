@@ -33,7 +33,6 @@ public class ExifEditor extends CordovaPlugin {
      * Adds Exif data to an image
      * @param filePath - path of the file
      * @param extraInfo - json sting of key value pairs passed from javascript e.g {"UserComment" : "gone hiking"}
-     * @throws Exception
      */
     private void addExifData(String filePath, String extraInfo, CallbackContext callbackContext) {
         try {
