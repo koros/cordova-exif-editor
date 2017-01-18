@@ -23,9 +23,14 @@ public class ExifEditor extends CordovaPlugin {
         if (action.equals("AddExifData")) {
 			 cordova.getThreadPool().execute(new Runnable() {
 				public void run() {
-					String filePath = args.getString(0);
-					String extraInfo = args.getString(1);
-					addExifData(filePath, extraInfo, callbackContext);
+                    try{
+                        String filePath = args.getString(0);
+                        String extraInfo = args.getString(1);
+                        addExifData(filePath, extraInfo, callbackContext);
+                    }
+                    catch (JSONException e){
+                        callbackContext.error(e.toString());
+                    }
 				}
 			});
 
