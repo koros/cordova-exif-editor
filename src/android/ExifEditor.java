@@ -19,7 +19,7 @@ import android.util.Log;
 public class ExifEditor extends CordovaPlugin {
 
     @Override
-    public boolean execute(final String action,final  JSONArray args,final CallbackContext callbackContext) throws JSONException {
+    public boolean execute(final String action,final  JSONArray args,final CallbackContext callbackContext) {
         if (action.equals("AddExifData")) {
 			 cordova.getThreadPool().execute(new Runnable() {
 				public void run() {
