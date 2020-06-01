@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.mobileaccord.local:gkoros/exifeditor.git"
+    "url": "git+https://github.com/MobileAccord/cordova-exif-editor.git"
   },
   "keywords": [
     "ecosystem:cordova",

@@ -19,7 +19,28 @@ import android.util.Log;
 public class ExifEditor extends CordovaPlugin {
 
     @Override
-    public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+    public boolean execute(final String action,final  JSONArray args,final CallbackContext callbackContext) {
+        if (action.equals("AddExifData")) {
+			 cordova.getThreadPool().execute(new Runnable() {
+				public void run() {
+                    try{
+                        String filePath = args.getString(0);
+                        String extraInfo = args.getString(1);
+                        addExifData(filePath, extraInfo, callbackContext);
+                    }
+                    catch (JSONException e){
+                        callbackContext.error(e.toString());
+                    }
+				}
+			});
+
+            return true;
+        }
+        return false;
+    }
+
+	/* older impl
+	 public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("AddExifData")) {
             String filePath = args.getString(0);
             String extraInfo = args.getString(1);
@@ -28,7 +49,9 @@ public class ExifEditor extends CordovaPlugin {
         }
         return false;
     }
-
+	*/
+	
+	
     /**
      * Adds Exif data to an image
      * @param filePath - path of the file
